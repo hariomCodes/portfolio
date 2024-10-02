@@ -7,11 +7,11 @@ const Testimonials = () => (
       <div className="space-y-8">
         <div className="bg-darkHeader dark:bg-lightHeader p-6 rounded-lg shadow-md">
           <p className="text-lg mb-4">"A highly skilled software engineer with an excellent grasp of both backend and frontend development."</p>
-          <p className="text-accent font-bold">- Jane Doe, Project Manager</p>
+          <p className="text-accent font-bold">- Vikas Pandey, Content Creator</p>
         </div>
         <div className="bg-darkHeader dark:bg-lightHeader p-6 rounded-lg shadow-md">
           <p className="text-lg mb-4">"Delivered a top-notch project on time with great attention to detail."</p>
-          <p className="text-accent font-bold">- John Smith, Client</p>
+          <p className="text-accent font-bold">- Daksh Dobhal, Client</p>
         </div>
       </div>
     </div>

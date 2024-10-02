@@ -14,13 +14,13 @@ const Contact = () => (
       </p>
       <div className="flex justify-center space-x-8">
         <a
-          href="mailto:your-email@example.com"
+          href="mailto:hariom.codes@gmail.com"
           className="text-accent hover:text-white dark:hover:text-black transition duration-300"
         >
           <FaEnvelope size={32} />
         </a>
         <a
-          href="https://www.linkedin.com/in/your-profile"
+          href="https://www.linkedin.com/in/hariom-tiwari/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-accent hover:text-white dark:hover:text-black transition duration-300"
@@ -28,7 +28,7 @@ const Contact = () => (
           <FaLinkedin size={32} />
         </a>
         <a
-          href="https://github.com/your-username"
+          href="https://github.com/hariomCodes"
           target="_blank"
           rel="noopener noreferrer"
           className="text-accent hover:text-white dark:hover:text-black transition duration-300"

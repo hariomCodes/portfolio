@@ -1,10 +1,12 @@
 // webpack.config.js
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const plugin = require('@tailwindcss/forms');
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
   module: {
@@ -26,6 +28,13 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+        template: './public/index.html', // Your index.html file
+    }),
+  ],
+  mode: 'production',
+  
   devServer: {
     static: path.join(__dirname, 'public'),
     compress: true,

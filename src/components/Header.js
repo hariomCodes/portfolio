@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <header className="bg-darkHeader dark:bg-lightHeader text-white dark:text-black py-4">
       <div className="container mx-auto flex justify-between items-center px-4">
-        <h1 className="text-2xl font-bold">Your Name</h1>
+        <h1 className="text-2xl font-bold">hariomCodes</h1>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
