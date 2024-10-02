@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  @apply bg-lightBackground text-black; /* Default to light mode */
+}
+
+.dark body {
+  @apply bg-darkBackground text-white; /* Apply dark mode styles */
+}
+
+#root {
+  min-height: 100%;
+}
+
+
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

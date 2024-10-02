@@ -1,0 +1,88 @@
+import React, { useState, useEffect } from 'react';
+import { FaBars, FaSun, FaMoon } from 'react-icons/fa';
+
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Detect system preference and set initial theme
+  useEffect(() => {
+    const userPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const storedTheme = localStorage.getItem('theme');
+
+    if (storedTheme) {
+      setIsDarkMode(storedTheme === 'dark');
+    } else {
+      setIsDarkMode(userPreference);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDarkMode]);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  return (
+    <header className="bg-darkHeader dark:bg-lightHeader text-white dark:text-black py-4">
+      <div className="container mx-auto flex justify-between items-center px-4">
+        <h1 className="text-2xl font-bold">Your Name</h1>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex space-x-6">
+          <a href="#hero" className="text-accent hover:underline">Home</a>
+          <a href="#about" className="text-accent hover:underline">About</a>
+          <a href="#skills" className="text-accent hover:underline">Skills</a>
+          <a href="#projects" className="text-accent hover:underline">Projects</a>
+          <a href="#testimonials" className="text-accent hover:underline">Testimonials</a>
+          <a href="#contact" className="text-accent hover:underline">Contact</a>
+        </nav>
+
+        {/* Theme Toggle Button for Desktop */}
+        <button
+          onClick={toggleTheme}
+          className="hidden md:inline-flex ml-4 px-3 py-2 rounded bg-accent text-white dark:bg-black dark:text-white"
+        >
+          {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
+        </button>
+
+        {/* Hamburger Icon for Mobile */}
+        <FaBars onClick={toggleMenu} className="md:hidden cursor-pointer" size={24} />
+      </div>
+
+      {/* Mobile Dropdown */}
+      <div className={`md:hidden bg-darkHeader dark:bg-lightHeader text-white dark:text-black px-4 py-2 ${isOpen ? 'block' : 'hidden'}`}>
+        <nav className="space-y-4">
+          <a href="#hero" className="block text-accent hover:underline">Home</a>
+          <a href="#about" className="block text-accent hover:underline">About</a>
+          <a href="#skills" className="block text-accent hover:underline">Skills</a>
+          <a href="#projects" className="block text-accent hover:underline">Projects</a>
+          <a href="#testimonials" className="block text-accent hover:underline">Testimonials</a>
+          <a href="#contact" className="block text-accent hover:underline">Contact</a>
+
+          {/* Theme Toggle Button for Mobile */}
+          <button
+            onClick={toggleTheme}
+            className="w-full mt-4 px-3 py-2 rounded bg-accent text-white dark:bg-black dark:text-white flex justify-center"
+          >
+            {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
+          </button>
+        </nav>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
