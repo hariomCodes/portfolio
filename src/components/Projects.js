@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Projects = () => (
-  <section id="projects" className="py-12 bg-darkBackground dark:bg-lightBackground text-white dark:text-black">
+  <section id="projects" className="py-12 bg-lightBackground dark:bg-darkBackground text-black dark:text-white">
   <div className="container mx-auto px-4">
     <h2 className="text-3xl font-semibold mb-8">Projects</h2>
     <ul className="space-y-8">
-      <li className="bg-darkHeader dark:bg-lightHeader p-6 rounded-lg shadow-lg">
+      <li className="bg-lightHeader dark:bg-darkHeader p-6 rounded-lg shadow-lg">
         <h3 className="text-2xl font-bold text-accent mb-2">E-commerce Platform</h3>
         <img src="ecommerce-screenshot.png" alt="E-commerce Platform Screenshot" className="w-full h-auto rounded mb-4" />
         <p className="mb-4">
@@ -16,7 +16,7 @@ const Projects = () => (
           View on GitHub
         </a>
       </li>
-      <li className="bg-darkHeader dark:bg-lightHeader p-6 rounded-lg shadow-lg">
+      <li className="bg-lightHeader dark:bg-darkHeader p-6 rounded-lg shadow-lg">
         <h3 className="text-2xl font-bold text-accent mb-2">Real-time Chat Application</h3>
         <img src="chat-app-screenshot.png" alt="Chat App Screenshot" className="w-full h-auto rounded mb-4" />
         <p className="mb-4">

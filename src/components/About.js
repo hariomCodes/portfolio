@@ -1,7 +1,7 @@
 import React from 'react';
 
 const About = () => (
-    <section id="about" className="py-12 bg-darkBackground dark:bg-lightBackground text-white dark:text-black">
+    <section id="about" className="py-12 bg-lightBackground dark:bg-darkBackground text-black dark:text-white">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-semibold mb-8">About Me</h2>
       <p className="mb-4">
