@@ -13,6 +13,10 @@ const Testimonials = () => (
           <p className="text-lg mb-4">"Delivered a top-notch project on time with great attention to detail."</p>
           <p className="text-accent font-bold">- Daksh Dobhal, Client</p>
         </div>
+        <div className="bg-darkHeader dark:bg-lightHeader p-6 rounded-lg shadow-md">
+          <p className="text-lg mb-4">"On time delivery of project with tech support for the agreed upon time period. Five start service."</p>
+          <p className="text-accent font-bold">- Ashutosh Pandey, Client</p>
+        </div>
       </div>
     </div>
   </section>
